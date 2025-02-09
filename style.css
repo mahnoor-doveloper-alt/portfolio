@@ -8,32 +8,87 @@
     border-radius: 10px; /* Smooth Corners */
     box-shadow: 0px 4px 10px hsla(0, 0%, 9%, 0.929); /* Soft Shadow */
 }
-/* Logo Styling */
-.navbar-brand {
-    font-size: 30px !important;
-    font-weight: bold !important;
-    color: #FFD700 !important;
-    letter-spacing: 1px;
-}
-/* 🌟 Navbar Brand (Logo) Styling */
-.navbar-brand {
-    font-size: 2.5rem; /* Default Size */
-    font-weight: 800; /* Extra Bold */
-    color: #FFD700; /* Modern Yellow */
-    text-shadow: 4px 4px 15px rgba(255, 215, 0, 0.5); /* Soft Glow Effect */
-    font-family: 'Poppins', sans-serif; /* Trendy Font */
-    letter-spacing: 2px; /* Spaced Letters */
-    text-transform: uppercase; /* All Caps */
-    display: inline-block;
-    transition: all 0.3s ease-in-out; /* Smooth Effect */
+.navbar {
+    background-color: rgb(255, 255, 255); /* Background color */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+    padding: 10px 20px; /* Space around navbar */
 }
 
-/* 🔥 Hover Effect */
-.navbar-brand:hover {
-    color: #fff; /* White Text */
-    text-shadow: 5px 5px 20px rgba(255, 255, 255, 0.8); /* Glow Effect */
-    transform: scale(1.1); /* Slight Zoom */
+.navbar-brand {
+    font-weight: bold;
+    color: #ffcc00; /* Change color if needed */
+    font-size: 22px;
 }
+
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-nav {
+    text-align: center; /* Centering links in mobile */
+}
+
+.navbar-nav .nav-item {
+    margin: 5px 0;
+}
+
+.navbar-nav .nav-link {
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffcc00; /* Change hover color */
+}
+
+/* 🎨 Stylish Logo with Hover Effect */
+.navbar-brand {
+    font-size: 4rem; /* Bigger & Premium */
+    font-weight: 900; /* Super Bold */
+    color: #FFD700; /* Golden Look */
+    font-family: 'Bubblegum Sans', cursive; /* Bubbly Look */
+    letter-spacing: 5px; /* Spaced Letters */
+    text-transform: uppercase; /* Full Caps */
+    display: inline-block;
+    transition: all 0.4s ease-in-out; /* Smooth Hover Effect */
+    position: relative;
+}
+
+/* ✨ 3D Effect (Matching Headings Style) */
+.navbar-brand::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    color: rgba(255, 255, 255, 0.5); /* Light Shadow */
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🌟 Hover Magic (Like Your Headings) */
+.navbar-brand:hover {
+    color: #ff4f00; /* Neon Orange */
+    text-shadow: 3px 3px 15px rgba(255, 105, 0, 0.8); /* Strong Glow */
+    letter-spacing: 8px; /* Expanding Effect */
+    transform: scale(1.1) rotate(-2deg); /* Stylish Hover Effect */
+}
+
+/* 🚀 Hover Glow Effect */
+.navbar-brand:hover::before {
+    color: rgb(3, 2, 0); /* Brighter Golden Glow */
+    top: 0;
+    left: 0;
+    filter: blur(5px);
+}
+
+
 
 /* 📱 Responsive Design */
 @media (max-width: 1024px) { /* Tablet */
@@ -61,9 +116,9 @@
 }
 /* Hover Effect */
 .navbar-nav .nav-link:hover {
-    background-color: yellow;
-    color: black !important;
-    border: 1px solid gray;
+    background-color:red;
+    color:black !important;
+    border: 1px solid orange;
     transform: scale(1.05); /* Slight zoom */
 }
 /* Contact Button */
@@ -72,16 +127,16 @@
     background-color: #FFD700 !important;
     color: hsl(34, 12%, 12%) !important;
     font-weight: bold;
-    border:hsl(99, 94%, 49%) !important;
+    border:hwb(120 2% 98%) !important;
     padding: 12px 20px !important;
     border-radius: 5px !important;
     text-transform: uppercase;
     transition: all 0.3s ease-in-out;
 }
 .contact-btn:hover {
-    background-color: rgb(224, 214, 7) !important;
-    color: yellow !important;
-    border: 2px solid yellow !important;
+    background-color: yellow !important;
+    color: black !important;
+    border: 2px solid rgba(202, 193, 193, 0.55) !important;
 }
 /* Mobile Responsive */
 @media (max-width: 768px) {
@@ -124,7 +179,7 @@
 /* Styling for the circle image with bold black border */
 .circle-image img {
     border-radius: 10%;  /* Make it a circle */
-    border: 5px solid hsla(60, 6%, 7%, 0.984);  /* Bold black border around the image */
+    border: 5px solid rgba(245, 243, 243, 0.995);  /* Bold black border around the image */
     width: 300px;  /* Adjust the width as needed */
     height: 300px;  /* Adjust the height to maintain the circle */
     object-fit: cover;  /* Ensure the image fits within the circle */
@@ -145,75 +200,349 @@ button {
     cursor: pointer; /* Pointer cursor on hover */
 }
 
+
+/* 🎨 Stylish Contact Button */
+.contact-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #ff4f00, #ff9100); /* Vibrant Gradient */
+    border: none;
+    border-radius: 50px; /* Smooth Rounded Look */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(255, 105, 0, 0.5);
+}
+
+/* ✨ Hover Effect */
+.contact-btn:hover {
+    background: linear-gradient(45deg, #ff9100, #ff4f00); /* Reverse Gradient */
+    transform: scale(1.1); /* Slight Expansion */
+    box-shadow: 0 8px 20px rgba(255, 105, 0, 0.8);
+}
+
+/* 💫 Button Inner Glow Effect */
+.contact-btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 10%, transparent 50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* 🌟 Glow on Hover */
+.contact-btn:hover::before {
+    opacity: 1;
+}
+
+/* 🚀 Click Effect */
+.contact-btn:active {
+    transform: scale(0.95);
+}
+
 /* Hover effect */
 button:hover {
     background-color: yellow; /* Slightly darker yellow on hover */
     transform: scale(1.1); /* Slightly enlarge the button */
 }
-.intro-section {
-    background-color:white; /* Background black */
-    color:black !important; /* Text white */
-    padding: 50px 20px;
+
+
+
+
+
+
+
+
+
+
+
+/* 🎨 Stylish Heading (Like a Button) */
+.intro-text h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Bubblegum Sans', cursive; /* Bubble Font */
+    color: black;
+    background: linear-gradient(45deg, #ff4f00, #ff9100);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 10px rgba(255, 105, 0, 0.5);
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🌟 Hover Effect on Heading */
+.intro-text h2:hover {
+    background: linear-gradient(45deg, #ff9100, #ffcc00);
+    transform: scale(1.05);
+}
+
+/* 📜 Paragraph Box */
+.intro-text p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: black;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* ❤️ Red Hover Effect on Paragraph */
+.intro-text p:hover {
+    color: red;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+}
+
+/* 🖼️ Image with Red Shadow Hover */
+.circle-image img {
+    border-radius: 50%;
+    transition: all 0.4s ease-in-out;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 🌟 Hover Effect on Image */
+.circle-image img:hover {
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+    transform: scale(1.05);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .intro-text h2 {
+        font-size: 2rem;
+    }
+    .intro-text p {
+        font-size: 1rem;
+    }
+}
+
+
+/*jernoury*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+
+.section-title {
+    font-size: 2.8rem; /* Bigger & Bold */
+    font-weight: 900; /* Super Bold */
+    font-family: 'Bubblegum Sans', cursive; /* Bubbles Style */
+    color: #FF4F00; /* Neon Orange */
+    letter-spacing: 3px; /* Spaced Letters */
+    text-transform: uppercase; /* Capital Letters */
+    display: inline-block;
+    position: relative;
+    transition: all 0.4s ease-in-out; /* Smooth Hover */
+}
+
+/* ✨ Bubble Glow Effect */
+.section-title::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: yellow; /* Bright Yellow Glow */
+    filter: blur(5px);
+    z-index: -1;
+}
+
+/* 🌟 Hover Effect */
+.section-title:hover {
+    transform: scale(1.1); /* Slight Zoom */
+    text-shadow: 4px 4px 15px rgba(255, 79, 0, 0.8); /* Bright Neon Glow */
+}
+
+
+/* General Section Styling */
+.journey-section, .certificates-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+/* Section Title Fix */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #f4b400; /* Google-like yellow */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Flexbox Layout for Journey Content */
+.journey-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Text Section */
+.journey-text {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* Image Section */
+.journey-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Certificates Grid */
+.certificates-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Certificate Cards */
+.certificate-card {
+    background: #fff;
+    padding: 20px;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    text-align: left;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+
+.certificate-card {
+    background: #ffffff; /* White Background */
+    border-radius: 15px; /* Smooth Rounded Corners */
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2); /* Soft Shadow */
+    padding: 20px;
+    margin: 20px;
+    transition: all 0.3s ease-in-out; /* Smooth Hover */
+    border-left: 8px solid orange; /* Stylish Left Border */
+}
+
+/* 🔥 Certificate Headings (Same Bubble Effect) */
+.certificate-card h3 {
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: 'Bubblegum Sans', cursive;
+    color: red; /* Neon Orange */
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+}
+
+/* ✨ Bubble Glow Effect */
+.certificate-card h3::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: yellow;
+    filter: blur(5px);
+    z-index: -1;
+}
+
+/* 📜 Stylish Paragraph */
+.certificate-card p {
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #333; /* Dark Gray for Readability */
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* ✨ Hover Effect */
+.certificate-card:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 30px rgba(255, 79, 0, 0.3); /* Neon Orange Glow */
+}
+
+
+/* General Section Styling */
+.journey-section, .certificates-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Section Title Fix */
+.section-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #f4b400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* FLEXBOX for Desktop */
+.journey-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Text Section */
+.journey-text {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* Image Section */
+.journey-image {
+    flex: 1;
     text-align: center;
 }
 
-.intro-text h6 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #101008; /* Heading yellow */
-    text-transform: uppercase;
-    letter-spacing: 3px;
+.journey-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
 }
 
-.intro-text p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #100707;
-    max-width: 600px;
-    margin: auto;
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .journey-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .journey-text {
+        text-align: center;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
 }
 
-    
-  
-  
-  img:hover {
-    transform: scale(1.03); /* Slight Zoom Effect */
-  }
-  
-.circle-image img {
-    width: 300px; /* Image size */
-    height: 300px;
-    border-radius: 50%;
-    border: 5px solid #FFD700; /* Bold yellow border */
-    box-shadow: 0px 5px 15px rgba(18, 18, 15, 0.961);
-    border-radius: 10px; /* Soft Rounded Corners */
-   transition: transform 0.3s ease-in-out;
-}
-
-.intro-text h2 {
-    font-size: 1.8rem;
-    font-weight: 500;
-    color: rgb(16, 16, 2);
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    text-shadow: 2px 2px 5px hsla(120, 7%, 84%, 0.7);
-}
-
-.intro-text p {
-    font-size: 1.3rem;
-    font-weight: 500;
-    line-height: 1.8;
-    color: hsl(0, 0%, 2%);
-    max-width: 650px;
-    margin: 15px auto;
-    text-align: justify;
-    background: #ece5e50c;
-    padding: 15px;
-    border-left: 5px solid #FFD700;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(255, 255, 0, 0.5);
-}
 .journey-section {
     text-align: center;
     padding: 50px 0;
@@ -245,6 +574,39 @@ button:hover {
     object-fit: cover;
     border-radius: 10px;
     border: yellow;
+}
+
+
+/* 🌟 Paragraph Styling - Simple Yet Beautiful */
+.journey-section p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #222; /* Dark Grey for readability */
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    text-align: justify;
+    transition: all 0.3s ease-in-out;
+}
+
+/* ✨ Beautiful Hover Effect */
+.journey-section p:hover {
+    color: #ff4f00; /* Vibrant Orange */
+    letter-spacing: 1px;
+    transform: translateX(3px);
+}
+
+/* 🎨 Strong (Bold) Text */
+.journey-section p strong {
+    color: hsla(60, 33%, 2%, 0.829); /* Golden */
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out;
+}
+
+/* 🚀 Hover Effect on Strong Text */
+.journey-section p:hover strong {
+    color: #ff4f00; /* Deep Orange on Hover */
 }
 
 .scroll-to-top-btn {
@@ -367,6 +729,39 @@ button:hover {
 }
 
 /* About Content */
+
+/* 🌟 About Section - Simple Yet Stylish */
+.about-text p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #222; /* Dark Grey for readability */
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    text-align: justify;
+    transition: all 0.3s ease-in-out;
+}
+
+/* ✨ Beautiful Hover Effect */
+.about-text p:hover {
+    color: #ff4f00; /* Vibrant Orange */
+    letter-spacing: 0.8px;
+    transform: translateX(3px);
+}
+
+/* 🎨 Strong (Bold) Text */
+.about-text p strong {
+    color: hsl(45, 11%, 7%); /* Golden */
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out;
+}
+
+/* 🚀 Hover Effect on Strong Text */
+.about-text p:hover strong {
+    color: #ffd900ee; /* Deep Orange on Hover */
+}
+
 .about-content {
     display: flex;
     align-items: center;
@@ -605,6 +1000,41 @@ body {
 
 /*protfoli*/
 
+
+
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: yellow; /* Color change nahi kiya */
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px; /* Bubble Effect */
+    text-transform: uppercase;
+    font-family: "Comic Sans MS", cursive, sans-serif; /* Bubble Writing Style */
+    transition: 0.4s ease-in-out;
+}
+
+h2:hover {
+    background: linear-gradient(45deg, red, orange); /* Red-Orange Hover Effect */
+    color: yellow; /* Same Yellow Color Rahe */
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333; /* As it is */
+    transition: color 0.3s ease-in-out;
+}
+
+p:hover {
+    color: red; /* Paragraph Hover Effect */
+}
+
+
+
+
 section {
     padding: 10px;
     text-align: center;
@@ -783,6 +1213,7 @@ section {
 .contact-heading {
     font-size: 28px;
     color: #FFD700;
+    font-family: 'Bubblegum Sans', cursive; /* Bubbly Look */
     text-transform: uppercase;
     margin-bottom: 15px;
     font-weight: bold;
